@@ -103,13 +103,6 @@ if docs:
                 answer = rag_chain.invoke(user_input)
             except Exception as e:
                 answer = f"Error: {e}"
-        st.session_state.messages.append({"role": "assistant", "content": answer})
-        st.chat_message("assistant").write(answer)
-        with st.spinner("Generating answer..."):
-            try:
-                answer = rag_chain.invoke(user_input)
-            except Exception as e:
-                answer = f"Error: {e}"
             elapsed = time.time() - start_time
         st.session_state.messages.append({"role": "assistant", "content": answer})
         st.chat_message("assistant").write(answer)
