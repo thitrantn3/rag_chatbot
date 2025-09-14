@@ -10,8 +10,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_ollama import OllamaLLM
 
-# https://zapier.com/blog/perplexity-vs-chatgpt/
-
 CHROMA_DB_PATH = "./chroma_db"
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 LLM_MODEL = "llama3.2"
